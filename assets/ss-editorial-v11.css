@@ -70,3 +70,28 @@ html[data-ss-theme="light"] .ss11-progress{background:#222}
   object-fit:contain;
   max-height:580px;
 }
+
+/* Responsive Extended V14 — complementary rules; original editorial layout retained. */
+:where(.shell,.hero-bottom,.two,.services,.ss11-network__links,.ss-photo-grid) > *{min-width:0}
+:where(.logo,.service,#contatti-unificati a){overflow-wrap:anywhere}
+:where(img,video,iframe){max-width:100%}
+@media (min-width:1800px){
+  .shell{width:min(1840px,90%)}
+  #ss-photo-gallery-v10 .ss-gallery-inner{max-width:1840px}
+  #ss-photo-gallery-v10 .ss-photo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .hero{min-height:min(920px,calc(100svh - 76px))}
+}
+@media (min-width:3000px){
+  .shell{width:min(2160px,88%)}
+  #ss-photo-gallery-v10 .ss-gallery-inner{max-width:2160px}
+}
+@media (max-width:760px){
+  .top .shell{gap:14px}
+  .nav{row-gap:8px}
+  .hero-bottom{min-width:0}
+  #contatti-unificati{box-sizing:border-box;width:calc(100% - 28px)}
+}
+@media (max-width:390px){
+  .hero h1{font-size:clamp(2.7rem,11vw,4rem);letter-spacing:-.065em}
+  .contact h2{font-size:clamp(2.55rem,10vw,3.5rem)}
+}
